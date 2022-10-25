@@ -1,0 +1,19 @@
+@import "variables.scss";
+@import "mixin.scss";
+.dependencia {
+    width: 144px;
+    height: 170px;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 $siaf-small $siaf-small 0;
+    padding: $siaf-small $siaf-small-extra $siaf-small $siaf-small-extra;
+    background-color: $siaf-grey-10;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    text-decoration: none;
+    color: $siaf-black;
+    @include transition (all 0.3s cubic-bezier(0.0,0.0,0.2,1));
+    &:hover {
+        box-shadow: $box-shadow-lg;
+    }
+}

@@ -1,0 +1,25 @@
+<h2 class="heading-h2 fw-bold mb-3">Tipografía</h2>
+<p class="paragraph-regular mb-4">Siguiendo con las líneas de diseño establecidas, se ha usado la tipografía <span class="siaf-blue">CALIBRI</span>. Esta tipografía es una
+familia sans serif moderna con sutiles redondeos en tallos y esquinas. Además, se ha usado la tipografía Source Code Pro
+para diferenciar a la hora de mostrar bloques de código.</p>
+<hr>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Escala</th>
+			<th>Tipografía</th>
+			<th>Peso</th>
+			<th class="d-none d-md-table-cell">Caso</th>
+			<th class="d-none d-md-table-cell text-end">Interlineado</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let tipo of tipografia">
+			<td [ngStyle]="{'font-size': tipo.escala }">{{tipo.escala}}</td>
+			<td>{{tipo.tipografia}}</td>
+			<td>{{tipo.peso}}</td>
+			<td class="d-none d-md-table-cell">{{tipo.caso}}</td>
+			<td class="d-none d-md-table-cell text-end">{{tipo.interlineado}}</td>
+		</tr>
+	</tbody>
+</table>

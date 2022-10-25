@@ -1,0 +1,22 @@
+<h2 class="heading-h2 fw-bold mb-3">Espaciado</h2>
+<p class="paragraph-regular mb-4">Todo el espaciado de los componentes y la tipografía se realiza en incrementos de 8 píxeles. Este valor de 8px forma la
+unidad de medida básica para el espaciado.</p>
+<hr>
+<table class="table">
+	<thead>
+		<tr>
+			<th width="10%">Tamaño</th>
+			<th width="15%"></th>
+			<th>Nombre</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let espacio of espaciado">
+			<td>{{espacio.nombre}}</td>
+			<td>
+				<span class="espaciado" [ngStyle]="{'width': espacio.nombre }"></span>
+			</td>
+			<td>{{espacio.tamano}}</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,57 @@
+<h2 class="heading-h2 fw-bold mb-3">Botones</h2>
+<p class="paragraph-regular mb-4">Un botón desencadena una acción o un evento</p>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Estilos</h5>
+<button type="button" class="btn btn-primary">Primario</button>
+<button type="button" class="btn btn-secondary">Secundario</button>
+<button type="button" class="btn btn-outline-primary">Primario línea</button>
+<button type="button" class="btn btn-outline-secondary">Secundario línea</button>
+<button type="button" class="btn btn-outline-light">Suave</button>
+<pre prism class="dark mb-5" [code]="buttonStyle" language="html"></pre>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Tamaños</h5>
+<button type="button" class="btn btn-sm btn-primary">Pequeño</button>
+<button type="button" class="btn btn-primary">Regular</button>
+<button type="button" class="btn btn-lg btn-primary">Grande</button>
+<pre prism class="dark mb-5" [code]="buttonSize" language="html"></pre>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Botones con iconos</h5>
+<button type="button" class="btn btn-primary">
+	<span class="feather icon-save me-1"></span>
+	Grabar
+</button>
+<button type="button" disabled="true" class="btn btn-primary">
+	<div class="spinner-border spinner-border-sm me-2" role="status"></div>
+	Grabando...
+</button>
+<button type="button" class="btn btn-outline-secondary">
+	<span class="feather icon-edit-2 me-1"></span>
+	Editar
+</button>
+<button type="button" class="btn btn-secondary">
+	<span class="feather icon-x me-1"></span>
+	Cancelar
+</button>
+<button type="button" class="btn btn-outline-primary">
+	<span class="feather icon-plus me-1"></span>
+	Agregar
+</button>
+<pre prism class="dark mb-5" [code]="buttonIcon" language="html"></pre>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Solo iconos</h5>
+<button type="button" class="btn btn-icon btn-sm btn-outline-light">
+	<span class="feather icon-chevron-left"></span>
+</button>
+<button type="button" class="btn btn-icon btn-sm btn-outline-light">
+	<span class="feather icon-chevron-right"></span>
+</button>
+<button type="button" class="btn btn-icon btn-lg btn-primary">
+	<span class="feather icon-plus"></span>
+</button>
+<button type="button" class="btn btn-icon btn-lg btn-outline-light">
+	<span class="feather icon-filter"></span>
+</button>
+<button type="button" class="btn btn-icon btn-secondary">
+	<span class="feather icon-trash-2"></span>
+</button>
+<pre prism class="dark mb-5" [code]="onlyIcon" language="html"></pre>

@@ -1,0 +1,20 @@
+<h2 class="heading-h2 fw-bold mb-3">Datepicker</h2>
+<p class="paragraph-regular mb-4">Los selectores de fecha y hora permiten a los usuarios seleccionar una fecha y hora
+	para un formulario.
+</p>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Regular</h5>
+<div class="form-group mb-2">
+	<label for="ejemplo">Label</label>
+	<input autocomplete="off" class="form-control form-icon calendar" (click)="d.toggle()" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+				#d="ngbDatepicker">
+</div>
+<pre prism class="dark mb-5" [code]="regular" language="html"></pre>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Fecha mínima</h5>
+<div class="form-group mb-2">
+	<label for="ejemplo">Label</label>
+	<input autocomplete="off" [minDate]="{year: 2021, month: 12, day: 10 }" class="form-control form-icon calendar" (click)="d2.toggle()"
+		placeholder="yyyy-mm-dd" name="dp2" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
+</div>
+<pre prism class="dark mb-5" [code]="minima" language="html"></pre>

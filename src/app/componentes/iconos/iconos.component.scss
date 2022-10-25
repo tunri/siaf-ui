@@ -1,0 +1,51 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixin.scss";
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media ( min-width: 576px ) {
+	.grid-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media ( min-width: 850px ) {
+	.grid-container {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+@media ( min-width: 992px ) {
+	.grid-container {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+.iconos {
+    display: inline-flex;
+	align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0 $siaf-small;
+    background-color: $siaf-grey-10;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    text-decoration: none;
+    color: $siaf-black;
+    @include transition (all 0.3s cubic-bezier(0.0,0.0,0.2,1));
+    &:hover {
+        box-shadow: $box-shadow-lg;
+    }
+	.feather {
+		flex: 1 1 auto;
+		display: flex;
+    	align-items: center;
+		font-size: $siaf-medium;
+		color: $siaf-black;
+	}
+	.fontclass {
+		flex: 0 0 auto;
+        white-space: nowrap;
+		color: $siaf-grey-30;
+	}
+}

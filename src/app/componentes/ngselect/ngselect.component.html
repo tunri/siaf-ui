@@ -1,0 +1,19 @@
+<h2 class="heading-h2 fw-bold mb-3">Ngselect</h2>
+<p class="paragraph-regular mb-4">Ligero, todo en uno, selección de interfaz de usuario, selección múltiple y autocompletado.
+</p>
+<hr>
+<div class="form-group">
+	<label for="ejemplo">Regular</label>
+	<ng-select class="text-uppercase" [items]="ListaEjemplo" bindLabel="name" bindValue="id" [(ngModel)]="seleccionado"
+		[searchable]="false" [clearable]="false">
+	</ng-select>
+</div>
+<pre prism class="dark mb-5" [code]="regular" language="html"></pre>
+<hr>
+<div class="form-group">
+	<label for="ejemplo">Disabled</label>
+	<ng-select class="text-uppercase" [items]="ListaEjemplo" bindLabel="name" bindValue="id" [(ngModel)]="seleccionado"
+		[searchable]="false" [disabled]="true" [clearable]="false">
+	</ng-select>
+</div>
+<pre prism class="dark mb-5" [code]="disabled" language="html"></pre>

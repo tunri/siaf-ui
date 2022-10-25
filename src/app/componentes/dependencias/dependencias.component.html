@@ -1,0 +1,133 @@
+<h2 class="heading-h2 fw-bold mb-3">Dependencias</h2>
+<p class="paragraph-regular mb-4">Estas son las principales dependencias usadas en el sistema de diseño:</p>
+<div class="d-flex align-items-center">
+	<a [href]="item.url" 
+		target="_blank" 
+		class="dependencia" 
+		*ngFor="let item of dependencias">
+		<img [src]="item.image" [attr.alt]="item.nombre">
+		<p class="label-large mt-3 mb-0">{{item.nombre}}</p>
+	</a>
+</div>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">
+	Angular 
+	<span class="label-regular siaf-grey-30">v. 14.2.1</span>
+</h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">
+	Framework que permite a los desarrolladores trabajar de manera eficiente
+	y de forma más organizada. Para ver la manera correcta de instalar angular puede ver el siguiente video:</p>
+<hr>
+<!--Bootstrap-->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">
+	Bootstrap
+	<span class="label-regular siaf-grey-30">v. 5.2.0</span>
+</h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">El sistema de diseño está basado en el framework <a
+		class="text-decoration-none" target="_blank"
+		href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a> ya que es
+	una biblioteca de diseño robusta y multiplataforma.
+	Para más información del framework puede visitar su documentación: <a target="_blank"
+		href="https://getbootstrap.com/">https://getbootstrap.com/</a> </p>
+<h6 class="label-extralarge mt-4 mb-3">Instalación</h6>
+<p class="paragraph-regular siaf-grey-30 mb-4">Instalar el paquete <a class="text-decoration-none" target="_blank"
+		href="https://getbootstrap.com/docs/5.2/getting-started/download/">NPM</a></p>
+<pre prism class="dark" language="html">
+    npm install bootstrap@5.2.0
+</pre>
+<h6 class="label-extralarge mt-4 mb-3">Importación</h6>
+<p class="paragraph-regular siaf-grey-30 mb-4">Para hacer uso de los estilos y componentes, basta con añadir el
+	siguiente comando en su archivo <code>styles.scss</code></p>
+<pre prism class="dark" language="html">
+    @import '~bootstrap/scss/bootstrap';
+</pre>
+<h6 class="label-extralarge mt-4 mb-3">Perzonalicación</h6>
+<p class="paragraph-regular siaf-grey-30 mb-4">Para poder personalizar los estilos de <a class="text-decoration-none"
+		target="_blank" href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>, se deben
+	agregar las
+	siguientes reglas, recuerda que hay más
+	variables que se pueden configurar, para eso puede visitar su documentación: <a
+		href="https://getbootstrap.com/docs/5.2/customize/sass/">https://getbootstrap.com/docs/5.2/customize/sass/</a> </p>
+<pre prism class="dark mb-5" language="scss">
+    $theme-colors: (
+        "primary": $siaf-red,
+        "secondary": $siaf-grey-10,
+        "success":    $siaf-green,
+        "info":       $siaf-blue,
+        "warning":    $siaf-orange,
+        "danger":     $siaf-red,
+    );
+</pre>
+<!--Ngbootstrap-->
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">
+	Ng-bootstrap 
+	<span class="label-regular siaf-grey-30">v. 13.0.0</span>
+</h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">Librería que nos proporciona algunos componentes para tan solo
+	importarlos en nuestro proyecto y poder utilizarlos,
+	estos que siempre nos traen problemas dado que requieren javascript. Documentación: <a target="_blank"
+		href="https://ng-bootstrap.github.io/#/home">https://ng-bootstrap.github.io</a></p>
+<h6 class="label-extralarge mt-4 mb-3">Instalación</h6>
+<p class="paragraph-regular siaf-grey-30 mb-4">Instalar el paquete <a class="text-decoration-none" target="_blank"
+		href="https://www.npmjs.com/">NPM</a></p>
+<pre prism class="dark" language="html">
+    ng add @ng-bootstrap/ng-bootstrap
+</pre>
+<h6 class="label-extralarge mt-4 mb-3">Importación</h6>
+<p class="paragraph-regular siaf-grey-30 mb-4">Importe el módulo <span class="siaf-blue">NgbModule</span> en su archivo
+	<code>app.module.ts</code>
+</p>
+<pre prism class="dark mb-5" language="typescript">
+    <![CDATA[import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+    @NgModule({
+        imports: [NgbModule],
+    })
+    export class YourAppModule {
+    }]]>
+</pre>
+<!--Ngselect-->
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">
+	@ng-select
+	<span class="label-regular siaf-grey-30">v. 9.0.2</span>
+</h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">Sirve para acelerar el proceso de carga en las entradas y formularios.
+	visitar documentación: <a href="https://github.com/ng-select/ng-select"
+		target="_blank">https://github.com/ng-select</a></p>
+<h6 class="label-extralarge mt-4 mb-3">Instalación</h6>
+<p class="paragraph-regular siaf-grey-30 mb-4">Instalar el paquete <a class="text-decoration-none" target="_blank"
+		href="https://www.npmjs.com/">NPM</a></p>
+<pre prism class="dark" language="html">
+    npm install @ng-select/ng-select@9.0.2
+</pre>
+<h6 class="label-extralarge mt-4 mb-3">Importación</h6>
+<p class="paragraph-regular siaf-grey-30 mb-4">Importe el módulo <span class="siaf-blue">NgSelectModule</span> y el
+	módulo <span class="siaf-blue">FormsModule</span> en su archivo
+	<code>app.module.ts</code>
+</p>
+<pre prism class="dark" language="typescript">
+    <![CDATA[import { NgSelectModule } from '@ng-select/ng-select';
+    import { FormsModule } from '@angular/forms';
+    @NgModule({
+        declarations: [AppComponent],
+        imports: [NgSelectModule, FormsModule],
+        bootstrap: [AppComponent]
+    })
+    export class YourAppModule {}]]>
+</pre>
+<h6 class="label-extralarge mt-4 mb-3">Personalización</h6>
+<p class="paragraph-regular siaf-grey-30 mb-4">Para poder utilizar los estilos basta con añadir el
+	siguiente comando en su archivo <code>styles.scss</code></p>
+<pre prism class="dark" language="html">
+    @import "~@ng-select/ng-select/themes/default.theme.css";
+</pre>
+<hr>
+<div role="alert" class="alert alert-embebido alert-info">
+	<span class="feather icon-info"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Nota Importante</span>
+		<span class="label-large siaf-grey-30">Recuerda, siempre es mejor tener actualizada a la última versión estable
+			todas las dependencias</span>
+	</div>
+	<!-- <span class="feather icon-x ms-auto c-pointer"></span> -->
+</div>

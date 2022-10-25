@@ -1,0 +1,67 @@
+/* Import Scss styles */
+@import 'assets/scss/siaf';
+/* Import Bootstrap */
+@import '~bootstrap/scss/bootstrap';
+/* Import Ngselect */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+/* Import Feather icons */
+@import 'assets/icons/css/iconfont.css';
+/* Import Code*/
+@import "~prismjs/themes/prism-tomorrow.css";
+
+body {
+	color: $siaf-black;
+    font-family: 'Calibri', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+	&.siaf {
+		.tooltip {
+			.tooltip-arrow, .arrow {
+			  display: none;
+			}
+			.tooltip-inner {
+			  background-color: $siaf-grey-40;
+			  letter-spacing: 0.02rem;
+			  box-shadow: $box-shadow-lg;
+			  border-radius: $border-radius;
+			  font-weight: normal;
+			  font-size: 12px;
+			  color: $siaf-white;
+			}
+			&.show {
+			  opacity: .9;
+			}
+		}
+	}
+}
+pre {
+	max-height: 480px;
+    padding: 0.5rem 0 0.5rem 0;
+    border-radius: 4px;
+    color: $siaf-white;
+    background-color: $siaf-grey-40;
+}
+.image-box {
+    background: $siaf-grey-10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $siaf-medium;
+    border-radius: $border-radius-lg;
+}
+code {
+	color: $siaf-blue;
+	background-color: $siaf-blue-ligth;
+}
+@media (min-width: 576px) and (max-width: 992px ) {
+	.container-md, .container-sm, .container {
+		max-width: 100%;
+	}
+}
+	
+.tooltip-custom {
+	.tooltip-inner {
+		white-space: nowrap;
+		max-width: 300px;
+	}
+  }

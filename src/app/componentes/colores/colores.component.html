@@ -1,0 +1,14 @@
+<h2 class="heading-h2 fw-bold mb-3">Colores</h2>
+<p class="paragraph-regular mb-4">Los colores usados en la línea gráfica de la interfaz son los colores institucionales del MEF, adicionalmente se
+trabajan tonos de luces para expandir el contraste entre los elementos.</p>
+<hr>
+<div *ngFor="let categoria of colores">
+	<h5 class="heading-h5 fw-bold mt-4 mb-3">{{categoria.seccion}}</h5>
+	<p class="paragraph-regular siaf-grey-30 mb-4">Estos son los colores principales en el sistema de diseño SIAF</p>
+	<div class="siaf-boxcolor" *ngFor="let color of categoria.colores">
+		<span class="siaf-boxcolor-item" [ngStyle]="{'background-color': color.codigo }"></span>
+		<span class="label-large fw-bold mb-1">{{color.nombre}}</span>
+		<span class="label-large siaf-grey-30">{{color.codigo}}</span>
+	</div>
+	<hr>
+</div>

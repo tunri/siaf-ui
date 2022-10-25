@@ -1,0 +1,87 @@
+<h2 class="heading-h2 fw-bold mb-3">Alertas</h2>
+<p class="paragraph-regular mb-4">Las Alertas se utilizan para mostrar comentarios al usuario sobre una acción o estado.
+</p>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Flotante</h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">Alertas de tipo flotante</p>
+<div class="alert alert-flotante alert-success" role="alert">
+	<span class="feather icon-check-circle"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Título de alerta</span>
+		<span class="label-large siaf-grey-30">Texto o mensaje de alerta</span>
+	</div>
+	<span class="feather icon-x ms-auto c-pointer"></span>
+</div>
+<div class="alert alert-flotante alert-danger" role="alert">
+	<span class="feather icon-slash"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Título de alerta</span>
+		<span class="label-large siaf-grey-30">Texto o mensaje de alerta</span>
+	</div>
+	<span class="feather icon-x ms-auto c-pointer"></span>
+</div>
+<div class="alert alert-flotante alert-info" role="alert">
+	<span class="feather icon-info"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Título de alerta</span>
+		<span class="label-large siaf-grey-30">Texto o mensaje de alerta</span>
+	</div>
+	<span class="feather icon-x ms-auto c-pointer"></span>
+</div>
+<div class="alert alert-flotante alert-warning" role="alert">
+	<span class="feather icon-alert-triangle"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<!-- <span class="label-large fw-bold">Título de alerta</span> -->
+		<span class="label-large siaf-grey-30">Debe completar todos los campos requeridos.</span>
+	</div>
+	<span class="feather icon-x ms-auto c-pointer"></span>
+</div>
+
+<div class="alert alert-flotante alert-warning" role="alert">
+	<span class="feather icon-alert-triangle"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Ingrese monto</span>
+		<span class="label-large siaf-grey-30">clasificador: 2.1.1.1.1.3, meta: 1</span>
+		<span class="label-large siaf-grey-30">clasificador: 2.1.1.1.1.3, meta: 3</span>
+		<span class="label-large siaf-grey-30">clasificador: 2.1.1.1.1.3, meta: 22</span>
+	</div>
+	<span class="feather icon-x ms-auto c-pointer"></span>
+</div>
+<pre prism class="dark mb-5" [code]="alertFlotante" language="html"></pre>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Embebido</h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">Alertas de tipo embebido</p>
+<div class="alert alert-embebido alert-success" role="alert">
+	<span class="feather icon-check-circle"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Título de alerta</span>
+		<span class="label-large siaf-grey-30">Texto o mensaje de alerta</span>
+	</div>
+	<span class="feather icon-x ms-auto c-pointer"></span>
+</div>
+<div class="alert alert-embebido alert-danger" role="alert">
+	<span class="feather icon-slash"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Título de alerta</span>
+		<span class="label-large siaf-grey-30">Texto o mensaje de alerta</span>
+	</div>
+	<span class="feather icon-x ms-auto c-pointer"></span>
+</div>
+<div class="alert alert-embebido alert-info" role="alert">
+	<span class="feather icon-info"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Nota Importante</span>
+		<span class="label-large siaf-grey-30">Recuerda, siempre es mejor tener actualizada a la última versión estable
+			todas las dependencias</span>
+	</div>
+	<!-- <span class="feather icon-x ms-auto c-pointer"></span> -->
+</div>
+<div class="alert alert-embebido alert-warning" role="alert">
+	<span class="feather icon-alert-triangle"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Título de alerta</span>
+		<span class="label-large siaf-grey-30">Texto o mensaje de alerta</span>
+	</div>
+	<span class="feather icon-x ms-auto c-pointer"></span>
+</div>
+<pre prism class="dark mb-5" [code]="alertEmbebido" language="html"></pre>

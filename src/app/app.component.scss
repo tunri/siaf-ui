@@ -1,0 +1,52 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixin";
+.siaf {
+    &-header {
+        height: 64px;
+        display: flex;
+        align-items: center;
+		z-index: 1050;
+    }
+    &-aside {
+        padding-top: $siaf-medium;
+        height: 100%;
+        overflow-y: auto;
+        top: 0;
+		left: 0;
+		transform: translateX(-110%);
+		background-color: $siaf-white;
+		position: fixed;
+		box-shadow: $box-shadow-lg;
+		opacity: 0;
+		@include transition (all 0.3s cubic-bezier(0.0,0.0,0.2,1));
+		z-index: 1050;
+		&.show {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		@media (max-width: 768px) {
+			width: 80%;
+		}
+		@media (min-width: 768px) {
+			top: 64px;
+			position: sticky;
+			transform: translateX(0);
+			height: calc(100vh - 64px);
+			box-shadow: none;
+			opacity: 1;
+			z-index: 1020;
+		}
+    }
+    &-main {
+        padding: $siaf-medium 0;
+		@media (min-width: 768px) {
+			padding: $siaf-medium 0 $siaf-medium $siaf-medium;
+		}
+    }
+}
+.modal-backdrop {
+	display: none;
+	&.show {
+		display: block;
+	}
+}

@@ -1,0 +1,55 @@
+<h2 class="heading-h2 fw-bold mb-3">Integración</h2>
+<p class="paragraph-regular mb-4">A continuación se detalla los pasos para poder integrar los diversos archivos a un
+	nuevo proyecto</p>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Estilos </h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">Para poder integrar todos los estilos y archivos sass a cualquier
+	proyecto, deberá copiar la carpeta <span class="siaf-blue">SCSS</span> a los assets
+	de su proyecto</p>
+<div class="image-box mb-4">
+	<img class="mw-100" src="assets/images/scss-integracion.png" alt="scss-integracion">
+</div>
+<p class="paragraph-regular siaf-grey-30 mb-4">Luego importar el archivo <code>_siaf.scss</code> en la hoja de estilos
+	principal de su proyecto</p>
+<pre prism class="dark mb-5" language="scss">
+    @import 'assets/scss/siaf';
+</pre>
+<hr>
+<div role="alert" class="alert alert-embebido alert-info">
+	<span class="feather icon-info"></span>
+	<div class="w-100 mx-3 d-flex flex-column">
+		<span class="label-large fw-bold">Nota Importante</span>
+		<span class="label-large siaf-grey-30">Es necesario importar la tipografía luego de añadir la carpeta SCSS a sus
+			assets</span>
+	</div>
+	<!-- <span class="feather icon-x ms-auto c-pointer"></span> -->
+</div>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Tipografía </h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">Deberá copiar la carpeta <span class="siaf-blue">fonts</span> a los
+	assets de su proyecto</p>
+<div class="image-box mb-4">
+	<img class="mw-100" src="assets/images/tipografia-integracion.png" alt="tipografia-integracion">
+</div>
+<p class="paragraph-regular siaf-grey-30 mb-4">Añadir la siguiente regla en su hoja de estilos principal
+	<code>styles.scss</code>
+</p>
+<pre prism class="dark mb-5" language="css">
+    <![CDATA[body {
+        font-family: 'Calibri', Arial, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+    }]]>
+</pre>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Iconos </h5>
+<p class="paragraph-regular siaf-grey-30 mb-4">Deberá copiar la carpeta <span class="siaf-blue">icons</span> a los
+	assets de su proyecto</p>
+<div class="image-box mb-4">
+	<img class="mw-100" src="assets/images/iconos-integracion.png" alt="iconos-integracion">
+</div>
+<p class="paragraph-regular siaf-grey-30 mb-4">Luego puede importar el archivo <code>iconfont.css</code> a su hoja de
+	estilos principal <code>styles.scss</code></p>
+<pre prism class="dark mb-5" language="scss">
+    @import 'assets/icons/css/iconfont.css'>
+</pre>

@@ -1,0 +1,11 @@
+@import "../../../assets/scss/variables.scss";
+.espaciado {
+	width: 0;
+    height: 40px;
+    background-color: $siaf-blue-ligth;
+    border-radius: $border-radius;
+    display: inline-flex;
+}
+.table th, .table td {
+    vertical-align: middle;
+}

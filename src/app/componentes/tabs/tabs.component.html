@@ -1,0 +1,30 @@
+<h2 class="heading-h2 fw-bold mb-3">Tabs</h2>
+<p class="paragraph-regular mb-4">Los Tabs organizan el contenido similar en secciones individuales en la misma página.</p>
+<hr>
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Regular</h5>
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs d-flex flex-nowrap">
+	<li [ngbNavItem]="1">
+		<a ngbNavLink class="px-3" ngbTooltip="Detalles del documento" placement="bottom">
+			<span class="feather icon-file-text icon-md"></span>
+			<span class="ms-1">Detalles</span>
+		</a>
+		<ng-template ngbNavContent>Detalles del documento</ng-template>
+	</li>
+	<li [ngbNavItem]="2">
+		<a ngbNavLink class="px-3" ngbTooltip="Modificaciones del documento" placement="bottom">
+			<span class="feather icon-file-text icon-md"></span>
+			<span class="ms-1">Modificaciones</span>
+		</a>
+		<ng-template ngbNavContent>Modificaciones del documento</ng-template>
+	</li>
+	<li [ngbNavItem]="3" [disabled]="true">
+		<a ngbNavLink class="px-3" ngbTooltip="Actividad del documento" placement="bottom">
+			<span class="feather icon-file-text icon-md"></span>
+			<span class="ms-1">Actividad</span>
+		</a>
+		<ng-template ngbNavContent>Actividad del documento</ng-template>
+	</li>
+</ul>
+<div class="my-3" [ngbNavOutlet]="nav"></div>
+<pre prism class="dark mb-5" [code]="tabs" language="html"></pre>
+

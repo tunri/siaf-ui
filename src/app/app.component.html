@@ -1,0 +1,26 @@
+<header class="siaf-header bg-primary sticky-top py-2">
+	<div class="container d-flex aling-items-center">
+		<div (click)="menuMobile()" class="btn-menu me-3 d-inline-flex d-md-none">
+			<span class="feather icon-lg icon-menu text-white"></span>
+		</div>
+		<img src="../assets/images/siaf-logo.svg" class="mw-100" width="120" alt="siaf-logo">
+	</div>
+</header>
+<div class="container">
+	<div class="row g-2">
+		<aside class="mt-0 col-sm-12 col-md-3 siaf-aside sticky-top" id="siaf-aside">
+			<div class="mb-4" *ngFor="let categoria of menu">
+				<h6 class="label-extralarge fw-bold ms-3">{{categoria.seccion}}</h6>
+				<ul class="nav flex-column">
+					<li class="nav-item" *ngFor="let item of categoria.listado">
+						<a class="nav-link" (click)="menuMobile()" [ngClass]="{'u-disabled': !item.estado }" routerLinkActive="active" [routerLink]="[item.url]">{{item.nombre}}</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<main class="mt-0 col-sm-12 col-md-9 siaf-main">
+			<router-outlet></router-outlet>
+		</main>
+	</div>
+</div>
+<div id="siaf-backdrop" (click)="menuMobile()" class="d-md-none modal-backdrop fade"></div>

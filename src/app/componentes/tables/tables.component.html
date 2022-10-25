@@ -1,0 +1,353 @@
+<h2 class="heading-h2 fw-bold mb-3">Tablas</h2>
+<p class="paragraph-regular mb-4">Una tabla es un patrón específico para comparar conjuntos de datos de una manera muy
+	directa y analítica.</p>
+<hr>
+
+<!--Consulta-->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Consulta</h5>
+<div class="siaf-card border-0 py-1  mb-4">
+	<div class="table-sticky">
+		<table class="table table-consult m-0">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Descripción</th>
+					<th class="text-end">Monto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="c-inherit" *ngFor="let item of table">
+					<td>{{item.codigo}}</td>
+					<td>{{item.descripcion}}</td>
+					<td class="text-end">{{item.monto}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<pre prism class="dark mb-5" [code]="tablaconsulta" language="html"></pre>
+<hr>
+<!-- Montos -->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Montos</h5>
+<div class="siaf-card border-0 py-1  mb-4">
+	<div class="table-sticky">
+		<table class="table table-consult m-0">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Descripción</th>
+					<th class="text-end">Monto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="c-inherit" *ngFor="let item of table">
+					<td>{{item.codigo}}</td>
+					<td>{{item.descripcion}}</td>
+					<td class="text-end">{{item.monto}}</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2"></td>
+					<td class="fw-bold text-end">0.00</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</div>
+<pre prism class="dark mb-5" [code]="tablaconsultaMonto" language="html"></pre>
+<hr>
+<!-- Responsive -->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Responsive</h5>
+<div class="siaf-card border-0 py-1  mb-4">
+	<div class="table-responsive">
+		<div class="table-sticky">
+			<table class="table table-consult m-0">
+				<thead>
+					<tr>
+						<th>Código</th>
+						<th>Descripción</th>
+						<th>Descripción</th>
+						<th>Descripción</th>
+						<th>Descripción</th>
+						<th>Descripción</th>
+						<th class="text-end">Monto</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="c-inherit" *ngFor="let item of table">
+						<td>{{item.codigo}}</td>
+						<td>{{item.descripcion}}</td>
+						<td>{{item.descripcion}}</td>
+						<td>{{item.descripcion}}</td>
+						<td>{{item.descripcion}}</td>
+						<td>{{item.descripcion}}</td>
+						<td class="text-end">{{item.monto}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<pre prism class="dark mb-5" [code]="tablaconsultaResponsive" language="html"></pre>
+<hr>
+<!--Seleccion-->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Selección</h5>
+<div class="siaf-card border-0 py-1  mb-4">
+	<div class="table-sticky">
+		<table class="table m-0">
+			<thead>
+				<tr>
+					<th>Clasificador</th>
+					<th class="text-end">Saldo PCA Priorizado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of table" (click)="select(item)" [ngClass]="{'active': item.activo === true }">
+					<td>
+						2.1. 1 1. 1 2
+						<span *ngIf="item.metas" class="badge bg-warning ms-2">5 Metas</span>
+					</td>
+					<td class="text-end">{{item.monto}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<ul ngbNav #nav="ngbNav" class="nav-tabs d-flex flex-nowrap">
+	<li ngbNavItem>
+		<a ngbNavLink class="px-3">
+			<span>HTML</span>
+		</a>
+		<ng-template ngbNavContent>
+			<pre prism class="dark mb-5" [code]="tablaseleccion" language="html"></pre>
+		</ng-template>
+	</li>
+	<li ngbNavItem>
+		<a ngbNavLink class="px-3">
+			<span>TYPESCRIPT</span>
+		</a>
+		<ng-template ngbNavContent>
+			<pre prism class="dark mb-5" [code]="tablaseleccionTs" language="typescript"></pre>
+		</ng-template>
+	</li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>
+<hr>
+<!--Checkbox-->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Checkbox</h5>
+<div class="siaf-card border-0 py-1  mb-4">
+	<div class="table-sticky">
+		<table class="table m-0">
+			<thead>
+				<tr>
+					<th width="40"></th>
+					<th>S. Func.</th>
+					<th class="text-end">Saldo PIM</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let itemcheck of tableCheck; let i = index" (click)="select2(itemcheck)" [ngClass]="{'active': itemcheck.activo === true }">
+					<td>
+						<div class="form-check">
+							<input type="checkbox" (change)="select2(itemcheck)" [checked]="itemcheck.activo" class="form-check-input" id="{{i}}">
+							<label class="form-check-label" [attr.for]=" i " ></label>
+						</div>
+					</td>
+					<td>{{itemcheck.codigo}}</td>
+					<td class="text-end">{{itemcheck.monto}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<ul ngbNav #nav2="ngbNav" class="nav-tabs d-flex flex-nowrap">
+	<li ngbNavItem>
+		<a ngbNavLink class="px-3">
+			<span>HTML</span>
+		</a>
+		<ng-template ngbNavContent>
+			<pre prism class="dark mb-5" [code]="tablacheckbox" language="html"></pre>
+		</ng-template>
+	</li>
+	<li ngbNavItem>
+		<a ngbNavLink class="px-3">
+			<span>TYPESCRIPT</span>
+		</a>
+		<ng-template ngbNavContent>
+			<pre prism class="dark mb-5" [code]="tablacheckboxTs" language="typescript"></pre>
+		</ng-template>
+	</li>
+</ul>
+<div [ngbNavOutlet]="nav2"></div>
+<hr>
+<!--Botones-->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Botones</h5>
+<div class="siaf-card border-0 py-1  mb-4">
+	<div class="table-sticky">
+		<table class="table m-0">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Descripción</th>
+					<th class="text-end">Monto</th>
+					<th width="40"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of table" (click)="select(item)" [ngClass]="{'active': item.activo === true }">
+					<td>{{item.codigo}}</td>
+					<td>{{item.descripcion}}</td>
+					<td class="text-end">{{item.monto}}</td>
+					<td>
+						<button type="button" class="btn btn-icon btn-outline-light btn-sm">
+							<span class="feather icon-trash-2"></span>
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<pre prism class="dark mb-5" [code]="tablabotones" language="html"></pre>
+<hr>
+<!--Cabecera-->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Cabecera</h5>
+<div class="siaf-card border-0 py-1  mb-4">
+	<div class="table-heading border-bottom px-2">
+		<h6 class="label-large m-0 fw-bold">Meta</h6>
+		<button type="button" class="btn btn-outline-primary">
+			<span class="feather icon-plus me-1"></span>
+			Agregar
+		</button>
+	</div>
+	<div class="table-sticky">
+		<table class="table m-0">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Descripción</th>
+					<th class="text-end">Monto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="c-inherit" *ngFor="let item of table">
+					<td>{{item.codigo}}</td>
+					<td>{{item.descripcion}}</td>
+					<td class="text-end">{{item.monto}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<pre prism class="dark mb-5" [code]="tablacabecera" language="html"></pre>
+<hr>
+<!--Paginación-->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Paginación</h5>
+<div class="siaf-card border-0 pt-1  mb-4">
+	<div class="table-sticky">
+		<table class="table m-0">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Descripción</th>
+					<th class="text-end">Monto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="c-inherit" *ngFor="let item of tablePaginacion">
+					<td>{{item.codigo}}</td>
+					<td>{{item.descripcion}}</td>
+					<td class="text-end">{{item.monto}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="table-footer border-top px-2">
+		<div class="d-flex align-items-center">
+			<span class="label-regular me-2">Filas</span>	
+			<select class="form-control form-select" [(ngModel)]="pageSize" (ngModelChange)="paginacionTable();pagination()">
+				<option [ngValue]="10">10</option>
+				<option [ngValue]="25">25</option>
+				<option [ngValue]="50">50</option>
+			</select>
+		</div>
+		<div class="content-pagination">
+			<span class="label-regular">{{to}} a {{from}} de {{collectionSize}} registros</span>
+			<ngb-pagination [maxSize]="3" [rotate]="true" [ellipses]="false" [collectionSize]="collectionSize" [(page)]="page"
+				[pageSize]="pageSize" (pageChange)="paginacionTable(); pagination()">
+				<ng-template ngbPaginationPrevious>
+					<span class="feather icon-chevron-left"></span>
+				</ng-template>
+				<ng-template ngbPaginationNext>
+					<span class="feather icon-chevron-right"></span>
+				</ng-template>
+			</ngb-pagination>
+		</div>
+	</div>
+</div>
+<ul ngbNav #nav3="ngbNav" class="nav-tabs d-flex flex-nowrap">
+	<li ngbNavItem>
+		<a ngbNavLink class="px-3">
+			<span>HTML</span>
+		</a>
+		<ng-template ngbNavContent>
+			<pre prism class="dark mb-5" [code]="tablapaginacion" language="html"></pre>
+		</ng-template>
+	</li>
+	<li ngbNavItem>
+		<a ngbNavLink class="px-3">
+			<span>TYPESCRIPT</span>
+		</a>
+		<ng-template ngbNavContent>
+			<pre prism class="dark mb-5" [code]="tablapaginacionTs" language="typescript"></pre>
+		</ng-template>
+	</li>
+</ul>
+<div [ngbNavOutlet]="nav3"></div>
+<hr>
+<!--Editable-->
+<h5 class="heading-h5 fw-bold mt-4 mb-3">Editable</h5>
+<div class="siaf-card border-0 py-1  mb-4">
+	<div class="table-sticky">
+		<table class="table m-0">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Descripción</th>
+					<th class="text-end">Editable</th>
+					<th class="text-end">Monto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="c-inherit" *ngFor="let item of table, let i = index">
+					<td>{{item.codigo}}</td>
+					<td>{{item.descripcion}}</td>
+					<td class="text-end bg-secondary" [ngClass]="{'bg-change': item.editable}">
+						<input class="form-control form-control-sm text-end" (keyup)="editable($event, item)" type="text" placeholder="00.0">
+					</td>
+					<td class="text-end">{{item.monto}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<ul ngbNav #nav4="ngbNav" class="nav-tabs d-flex flex-nowrap">
+	<li ngbNavItem>
+		<a ngbNavLink class="px-3">
+			<span>HTML</span>
+		</a>
+		<ng-template ngbNavContent>
+			<pre prism class="dark mb-5" [code]="tablaeditable" language="html"></pre>
+		</ng-template>
+	</li>
+	<li ngbNavItem>
+		<a ngbNavLink class="px-3">
+			<span>TYPESCRIPT</span>
+		</a>
+		<ng-template ngbNavContent>
+			<pre prism class="dark mb-5" [code]="tablaeditableTs" language="httypescriptml"></pre>
+		</ng-template>
+	</li>
+</ul>
+<div [ngbNavOutlet]="nav4"></div>
